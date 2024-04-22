@@ -1,9 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
-// import 'dart:ui';
 
 void main() {
   runApp(const MyApp());
@@ -83,8 +78,30 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return const Scaffold(
+      backgroundColor: Colors.lightGreen,
       body: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        textDirection: TextDirection.ltr,
+        children: [
+          Text(
+            'Ghalib ',
+            style: TextStyle(
+              color: Colors.blueGrey,
+              fontSize: 50,
+            ),
+          ),
+          Text('Hassan ',
+              style: TextStyle(
+                color: Color.fromARGB(255, 71, 110, 130),
+                fontSize: 50,
+              )),
+          Text('Mir',
+              style: TextStyle(
+                color: Color.fromARGB(255, 25, 90, 122),
+                fontSize: 50,
+              )),
+        ],
       ),
     );
   }

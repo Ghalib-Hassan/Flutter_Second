@@ -78,46 +78,23 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-        backgroundColor: Colors.amber,
+        backgroundColor: Colors.green,
         body: Container(
-          height: 325,
-          color: Colors.purpleAccent,
+          decoration: const BoxDecoration(
+              color: Colors.red,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(50),
+              ),
+              boxShadow: [
+                BoxShadow(color: Colors.black, blurRadius: 10, spreadRadius: 1)
+              ]),
+          padding: const EdgeInsets.only(left: 23, right: 10),
+          height: 200,
+          width: 200,
           child: const Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Hi, Ghalib',
-                style: TextStyle(
-                  fontSize: 40,
-                  color: Colors.blueGrey,
-                  height: 13,
-                  // letterSpacing: 10,
-                  wordSpacing: 30,
-                ),
-              ),
-              Text(
-                'Welcome to Flutter, ',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  height: 28,
-                ),
-              ),
-              Text(
-                'Wake up to reality!!',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Color.fromARGB(255, 14, 40, 61),
-                  height: 28,
-                ),
-              ),
-              Icon(
-                Icons.account_balance_sharp,
-                size: 50,
-                color: Color.fromRGBO(0, 0, 0, 1),
-              ),
-            ],
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [Text('hi')],
           ),
         ));
   }

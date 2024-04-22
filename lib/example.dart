@@ -78,47 +78,47 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-        backgroundColor: Colors.amber,
-        body: Container(
-          height: 325,
-          color: Colors.purpleAccent,
-          child: const Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Hi, Ghalib',
-                style: TextStyle(
-                  fontSize: 40,
-                  color: Colors.blueGrey,
-                  height: 13,
-                  // letterSpacing: 10,
-                  wordSpacing: 30,
+      body: Column(
+        children: [
+          Expanded(
+            child: Container(
+              color: const Color.fromARGB(
+                  255, 186, 177, 177), // Replace with your UI content
+              child: Center(
+                child: Text(
+                  'Wellcome',
+                  style: TextStyle(
+                      fontSize: 34, color: Color.fromARGB(244, 25, 141, 199)),
                 ),
               ),
-              Text(
-                'Welcome to Flutter, ',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  height: 28,
-                ),
-              ),
-              Text(
-                'Wake up to reality!!',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Color.fromARGB(255, 14, 40, 61),
-                  height: 28,
-                ),
-              ),
-              Icon(
-                Icons.account_balance_sharp,
-                size: 50,
-                color: Color.fromRGBO(0, 0, 0, 1),
-              ),
-            ],
+            ),
           ),
-        ));
+          Container(
+            color: Colors.blue, // Bottom bar color
+            height: 50, // Height of the bottom bar
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  IconButton(
+                    icon: Icon(Icons.home),
+                    onPressed: () {},
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.search),
+                    onPressed: () {},
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.favorite),
+                    onPressed: () {},
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
